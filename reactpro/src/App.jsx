@@ -1,12 +1,12 @@
-
+import Hello from "./componenets/Hello";
+import Fruits from "./componenets/Fruits";
 
 function App() {
-
   return (
     <div className="App">
-      Hello World!
+      <Fruits />
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
