@@ -9,3 +9,4 @@ export default function ConditionaComponent() {
 
 // jsx only starts after return statement
 // if possible component should always only have one return statement
+// ? this is true in the begining false int he back
