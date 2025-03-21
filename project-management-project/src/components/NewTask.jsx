@@ -1,0 +1,32 @@
+import {useState} from 'react';
+
+export default function NewTask({ onAdd }) {
+    const [eneteredTask, setEnteredTask] = useState("");
+
+    function handleTaskChange(event) {
+        setEnteredTask(event.target.value);
+    }
+
+    function handleClick() {
+        if (eneteredTask.trim().length === 0) {
+            return;
+        }
+        onAdd(eneteredTask);
+        setEnteredTask("");
+        // Add the task to the list of tasks
+
+    }
+    return (
+        <div className="flex items-center gap-4"> 
+            <input type="text" 
+            className="w-64 px-2 py-1 rounded-sm bg-stone-200"
+            onChange={handleTaskChange}
+            value={eneteredTask}/>
+            <button 
+            className="text-stone-700 hover:text-stone-950"
+            onClick={handleClick}>
+                Add Task
+            </button>
+        </div>
+    )
+}
